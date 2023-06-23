@@ -20,7 +20,6 @@ const uniqueMessage = (error) => {
 
   return output;
 };
-
 /**
  * Get the erroror message from error object
  */

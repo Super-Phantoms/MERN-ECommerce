@@ -6,8 +6,6 @@ const { errorHandler } = require('../helpers/dbErrorHandler');
 require('dotenv').config();
 
 exports.signup = (req, res) => {
-  console.log("aaaaaaaaaaa");
-  // console.log('req.body', req.body);
   const user = new User(req.body);
   user.save((err, user) => {
     if (err) {
@@ -59,7 +57,6 @@ exports.signout = (req, res) => {
 
 exports.requireSignin = expressJwt({
   secret: process.env.JWT_SECRET,
-  // algorithms: ['RS256'],
   userProperty: 'auth',
 });
 

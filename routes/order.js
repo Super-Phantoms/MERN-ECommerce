@@ -21,9 +21,7 @@ router.post(
   decreaseQuantity,
   create
 );
-
 router.get('/order/list/:userId', requireSignin, isAuth, isAdmin, listOrders);
-
 router.get(
   '/order/status-values/:userId',
   requireSignin,
@@ -31,7 +29,6 @@ router.get(
   isAdmin,
   getStatusValues
 );
-
 router.put(
   '/order/:orderId/status/:userId',
   requireSignin,
@@ -39,7 +36,6 @@ router.put(
   isAdmin,
   updateOrderStatus
 );
-
 router.param('userId', userById);
 router.param('orderId', orderById);
 

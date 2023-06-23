@@ -62,7 +62,6 @@ const Orders = () => {
         loadOrders();
       }
     });
-    // console.log('update order status');
   };
 
   const showStatus = (o) => (
